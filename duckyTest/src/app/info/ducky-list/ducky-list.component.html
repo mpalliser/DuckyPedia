@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Duck</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-ducky-item
+      *ngFor="let duckEl of ducks"
+      [duck]="duckEl"
+      (duckSelected)="onDuckSelected(duckEl)"></app-ducky-item>
+  </div>
+</div>
