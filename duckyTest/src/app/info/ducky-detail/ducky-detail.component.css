@@ -1,0 +1,9 @@
+#duckyDetail {
+  border: solid 1px;
+  border-color: #b7e2ff;
+  border-radius: 5px 5px 5px 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+  padding: 10px;
+}
