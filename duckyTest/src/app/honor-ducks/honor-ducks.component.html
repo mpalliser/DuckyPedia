@@ -1,27 +1,13 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <img src="https://i.gyazo.com/85ddf189123f5d438bd10f11f73fcab7.png"
-           class="rounded-circle"
-           width="140" height="140">
-      <h2>David Gelpi</h2>
-      <h4>nicks</h4>
-      <p>descripción here</p>
-    </div>
-<!--    <div class="col-md-4">
-      <img src="https://files.slack.com/files-pri/T2F7TQ7AP-F6X16HWSG/whatsapp_image_2017-02-24_at_17.10.24.jpeg" alt=""
-           class="rounded-circle"
-           width="140" height="140">
-      <h2>Miguel? Urbina</h2>
-      <h4>nicks</h4>
-      <p>descripción here</p>
-    </div>
-    <div class="col-md-4">
-      <img src="https://i.gyazo.com/85ddf189123f5d438bd10f11f73fcab7.png"
-           class="rounded-circle"
-           width="140" height="140">
-      <h2>Alex Espinola</h2>
-      <p>descripción here</p>
-    </div>-->
-  </div>
+<div class="row">
+  <app-honor-list
+    (honorDuckWasSelected)="selectedHonorDuck = $event"></app-honor-list>
+</div>
+<hr>
+<div class="row">
+  <app-honor-detail
+    *ngIf="selectedHonorDuck; else infoText"
+    [honorDuck]="selectedHonorDuck"></app-honor-detail>
+  <ng-template #infoText>
+    <p>Please select a Duck!</p>
+  </ng-template>
 </div>

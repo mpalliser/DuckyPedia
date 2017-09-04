@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Duck } from './duck.model';
+import { Duck } from '../duck.model';
 
 @Component({
   selector: 'app-info',

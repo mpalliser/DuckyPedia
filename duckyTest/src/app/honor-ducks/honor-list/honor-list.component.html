@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <app-honor-item
+        class="col-md-4 text-center"
+        *ngFor="let honorDuck of honorDucks"
+        [honorDuck]="honorDuck"
+        (duckSelected)="onDuckSelected(honorDuck)"></app-honor-item>
+    </div>
+  </div>
+</div>
